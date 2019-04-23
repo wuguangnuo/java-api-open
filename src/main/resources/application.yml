@@ -1,0 +1,31 @@
+spring:
+  redis:
+    database: 0
+    host: redis地址
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://数据库地址:1433;DatabaseName=数据库名;
+    username: 数据库账号
+    password: 数据库密码
+  data:
+    mongodb:
+      database: mongodb数据库名
+      host: 数据库地址
+      port: 27017
+  rabbitmq:
+    host: rabbitMQ地址
+    port: 5672
+    username: rabbitMQ账号
+    password: rabbitMQ密码
+mybatis-plus:
+  mapper-locations: classpath:com/xyj/api/mapper/xml/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: false
+logging:
+  #  config: logback-spring.xml
+  level:
+    com.xyj.employee: debug
+    io.swagger.models.parameters.AbstractSerializableParameter: error
+server:
+  port:
+    8081
